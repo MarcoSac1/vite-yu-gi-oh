@@ -1,11 +1,11 @@
-<script setup>
-  export default{
-    data(){
-      return{
+<script>
+    export default{
+      data(){
+        return{
 
+        }
       }
     }
-  }
 </script>
 
 <template>
@@ -16,5 +16,5 @@
 @use'./styles/partials/variable' as *;
 @use'./styles/partials/mixins' as *;
 @use'./styles/general.scss';
-@use'../node_modules/bootstrapp/scss/bootstrap.scss';
+@use'../node_modules/bootstrap/scss/bootstrap.scss';
 </style>
