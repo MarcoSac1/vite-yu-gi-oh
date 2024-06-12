@@ -24,7 +24,7 @@ export default{
     <section class="container">
         <div class="col-12">
             <div class="row">
-                <article v-for="(cards, index) in cards" :key="index" class="col-2 p-2">
+                <article v-for="(cards, index) in cards" :key="index" class="col-3 p-2">
                     <div class="card w-100 h-100 p-2">
                         <img :src=" cards.card_images[0].image_url" class="card-img-top" alt="...">
                         <div class="card-body text-center">
