@@ -9,6 +9,12 @@ export default{
         return{
 
         }
+    },
+    props:{
+        cards:{
+            type: Array,
+            required: true
+        }
     }
 }
 </script>
@@ -16,7 +22,7 @@ export default{
 <template>
     <CardCaracters/>
     <section>
-        <h1>CardList</h1>
+        <h1>lunghezza {{ cards.length }}</h1>
     </section>
 </template>
 
