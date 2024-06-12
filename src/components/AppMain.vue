@@ -33,7 +33,6 @@ export default{
 
 <template>
     <main>
-        <h1>main</h1>
         <CardList :cards="cards"/>
     </main>
 </template>
