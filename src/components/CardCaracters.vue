@@ -1,10 +1,6 @@
 <script>
-import CardCaracters from './CardCaracters.vue'
 
 export default{
-    components:{
-        CardCaracters
-    },
     data(){
         return{
 
@@ -14,9 +10,8 @@ export default{
 </script>
 
 <template>
-    <CardCaracters/>
     <section>
-        <h1>CardList</h1>
+        <h1>CardCaracters</h1>
     </section>
 </template>
 
