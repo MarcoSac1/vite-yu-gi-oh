@@ -1,13 +1,16 @@
 <script>
+import AppSearch from './AppSearch.vue';
 import CardList from './CardList.vue';
 import axios from 'axios';
 export default{
     components: {
-        CardList
+        CardList,
+        AppSearch
     },
     data(){
         return{
             cards:[],
+            archetypes: []
         }
     },
     methods:{
@@ -23,16 +26,31 @@ export default{
             .finally(function () {
                 
             });
+        },
+        getArchetypes(){
+            axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+            .then((response) => {
+                console.log(response.archetype_name);
+                this.cards=response.archetype_name;
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+            .finally(function () {
+                
+            });
         }
     },
     created(){
         this.getCards();
+        this.getArchetypes();
     }
 }
 </script>
 
 <template>
     <main>
+        <AppSearch :archetypes="archetypes"/>
         <CardList :cards="cards"/>
     </main>
 </template>
