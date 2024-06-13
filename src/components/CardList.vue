@@ -20,9 +20,9 @@ export default{
 </script>
 
 <template>
-    <section class="container p-5 mb-4">
+    <section class="container rounded p-5 mb-4">
         <h1 class=" text-light"> Generated cards: {{ cards.length }}</h1>
-        <div class="col-12">
+        <div class="col-12 ">
             <div class="row">
                 <Card v-for="(cards, index) in cards" :key="index" :cards="cards"/>
             </div>

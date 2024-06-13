@@ -13,9 +13,10 @@ export default{
             archetypes: []
         }
     },
+    // &archetype=
     methods:{
         getCards(){
-            axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
+            axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0&archetype=alien')
             .then((response) => {
                 console.log(response.data.data);
                 this.cards=response.data.data;
