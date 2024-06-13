@@ -32,6 +32,7 @@ export default{
             .then((response) => {
                 console.log(response.data);
                 this.archetypes=response.data;
+                console.log(this.archetypes);
             })
             .catch(function(error){
                 console.log(error);
