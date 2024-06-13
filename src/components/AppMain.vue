@@ -31,7 +31,7 @@ export default{
             axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
             .then((response) => {
                 console.log(response.archetype_name);
-                this.cards=response.archetype_name;
+                this.archetypes=response.archetype_name;
             })
             .catch(function(error){
                 console.log(error);
@@ -50,8 +50,8 @@ export default{
 
 <template>
     <main>
-        <AppSearch :archetypes="archetypes"/>
         <CardList :cards="cards"/>
+        <AppSearch :archetypes="archetypes"/>
     </main>
 </template>
 
