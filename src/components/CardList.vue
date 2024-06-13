@@ -20,20 +20,12 @@ export default{
 </script>
 
 <template>
-    <Card/>
+    
     <section class="container p-5 mb-4">
         <h1 class=" text-light"> Generated cards: {{ cards.length }}</h1>
         <div class="col-12">
             <div class="row">
-                <article v-for="(cards, index) in cards" :key="index" class="col-3 p-2">
-                    <div class="card w-100 h-100 p-2">
-                        <img :src=" cards.card_images[0].image_url" class="card-img-top" alt="...">
-                        <div class="card-body text-center">
-                            <p class="card-text ">{{ cards.name }}</p>
-                            <p class="card-text">{{ cards.archetype }}</p>
-                        </div>
-                    </div>
-                </article>
+                <Card v-for="(cards, index) in cards" :key="index" :cards="cards"/>
             </div>
         </div>
     </section>
