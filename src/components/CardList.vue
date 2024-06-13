@@ -1,9 +1,9 @@
 <script>
-import CardCaracters from './CardCaracters.vue'
+import Card from './Card.vue'
 
 export default{
     components:{
-        CardCaracters
+        Card
     },
     data(){
         return{
@@ -20,7 +20,7 @@ export default{
 </script>
 
 <template>
-    <CardCaracters/>
+    <Card/>
     <section class="container p-5 mb-4">
         <h1 class=" text-light"> Generated cards: {{ cards.length }}</h1>
         <div class="col-12">
