@@ -26,7 +26,7 @@ export default{
             </button>
             <ul class="dropdown-menu dropdown-menu-dark">
                 <li  v-for="(archetypes, index) in archetypes" :key="index" :archetypes="archetypes"  >
-                    <a class="dropdown-item " @click="$emit('selected', cercato)"  href="#">{{ archetypes.archetype_name }}</a>
+                    <a class="dropdown-item " @click="$emit('selected', archetypes.archetype_name)"  href="#">{{ archetypes.archetype_name }}</a>
                 </li>
             </ul>
         </div>

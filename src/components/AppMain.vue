@@ -13,10 +13,10 @@ export default{
             archetypes: []
         }
     },
-    // &archetype=
     methods:{
-        getCards(){
-            axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0&archetype=alien')
+        getCards(pippo){
+            // console.log(pippo,'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0&archetype=' + pippo);
+            axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0&archetype=' + pippo)
             .then((response) => {
                 console.log(response.data.data);
                 this.cards=response.data.data;
@@ -41,18 +41,20 @@ export default{
             .finally(function () {
                 
             });
-        }
+        },
+
     },
     created(){
         this.getCards();
         this.getArchetypes();
     }
+
 }
 </script>
 
 <template>
     <main>
-        <AppSearch :archetypes="archetypes"/>
+        <AppSearch @selected='getCards':archetypes="archetypes"/>
         <CardList :cards="cards"/>
     </main>
 </template>
